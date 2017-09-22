@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="124" id="KGk-i7-Jjw" customClass="TableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="370" height="124"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="370" height="123.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="百年一遇" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68R-It-AGa">
+                        <rect key="frame" x="16" y="14" width="201" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="201" id="At2-0X-wEz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="1.我在UIViewController的Category中写了一个方法,用来自定义返回按钮.有人可能会问,为什么要写在Category中,不写在父类中,直接继承过来就好.我个人是认为Category的耦合性远比父类要低.至于好处,相信各位攻城狮都知道." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hK2-UJ-Dv6">
+                        <rect key="frame" x="13" y="43" width="210" height="66"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="66" id="fP5-2t-VBL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left" translatesAutoresizingMaskIntoConstraints="NO" id="IEi-dA-Pna">
+                        <rect key="frame" x="234" y="12" width="122" height="101"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="122" id="5oS-tF-eY0"/>
+                            <constraint firstAttribute="height" constant="101" id="fXx-Q1-6rM"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="IEi-dA-Pna" firstAttribute="leading" secondItem="hK2-UJ-Dv6" secondAttribute="trailing" constant="11" id="JWO-VZ-NYk"/>
+                    <constraint firstItem="hK2-UJ-Dv6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="RMs-S2-bNH"/>
+                    <constraint firstItem="hK2-UJ-Dv6" firstAttribute="top" secondItem="68R-It-AGa" secondAttribute="bottom" constant="8" id="T37-oE-i7J"/>
+                    <constraint firstItem="68R-It-AGa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="gK0-FQ-rSc"/>
+                    <constraint firstItem="68R-It-AGa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="h1K-GE-liF"/>
+                    <constraint firstItem="IEi-dA-Pna" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="tRl-9n-SCY"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="IEi-dA-Pna" secondAttribute="trailing" constant="6" id="uSP-DM-l1T"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="textContent" destination="hK2-UJ-Dv6" id="fgO-uU-b5G"/>
+                <outlet property="titleLab" destination="68R-It-AGa" id="n7L-k2-ewl"/>
+            </connections>
+            <point key="canvasLocation" x="170" y="39"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="left" width="9" height="16"/>
+    </resources>
+</document>
